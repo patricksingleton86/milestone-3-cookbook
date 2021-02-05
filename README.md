@@ -1,3 +1,6 @@
+pkill -9 python3
+
+
 # Online Cookbook
 
 Site for finding new recipes and sharing your own recipes.
