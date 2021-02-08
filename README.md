@@ -15,7 +15,7 @@ Site for finding new recipes and sharing your own recipes.
 * Edit/delete my uploade recipes
 * Be able to register/ log in
 
-#### As the sit owner I would like to:
+#### As the site owner I would like to:
 
 * Promote a brand of cookware
 * Access, edit and delete all information on site
