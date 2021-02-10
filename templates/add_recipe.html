@@ -3,7 +3,7 @@
 
     <h3 class="blue-grey-text text-darken-2 center-align">Add Recipe</h3>
 
-    <div class="row">
+    <div class="row card-panel grey lighten-3">
         <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s12">
@@ -18,7 +18,41 @@
                     <i class="fas fa-align-left prefix blue-grey-text text-darken-2"></i>
                     <textarea id="recipe_description" name="recipe_description" minlength="5"
                         maxlength="200" class="materialize-textarea validate" required></textarea>
-                    <label for="recipe_description">Recipe Description</label>
+                    <label for="recipe_description">Description</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix blue-grey-text text-darken-2"></i>
+                    <textarea id="ingredients" name="ingredients" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="ingredients">Ingredients</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix blue-grey-text text-darken-2"></i>
+                    <textarea id="preparation" name="preparation" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="preparation">Preparation</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="fas fa-align-left prefix blue-grey-text text-darken-2"></i>
+                    <textarea id="preparation_time" name="preparation_time" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="preparation_time">Preparation Time</label>
+                </div>
+                <div class="input-field col s6">
+                    <select id="categoty_name" name="categoty_name">
+                        <option value="" disabled selected>Meal Type</option>
+                        <option value="1">Breakfast</option>
+                        <option value="2">Lunch</option>
+                        <option value="3">Dinner</option>
+                        <option value="3">Snack</option>
+                    </select>
+                    <label for="categoty_name">Meal Type</label>
                 </div>
             </div>
         </form>
