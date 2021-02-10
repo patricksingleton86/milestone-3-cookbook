@@ -1,26 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.category_name }}<br>
-        {{ recipe.recipe_description }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.preparation }}<br>
-        {{ recipe.preparation_time }}<br>
-    {% endfor %}
-
     <ul class="collapsible">
         {% for recipe in recipes %}
-        <li>
+        <li class="active">
             <div class="collapsible-header yellow-text blue-grey darken-2 text-shadow">
                 <i class="fas fa-caret-down"></i>
                 <strong>{{ recipe.recipe_name }}</strong> : {{ recipe.preparation_time }}
             </div>
             <div class="collapsible-body">
                 <strong>{{ recipe.recipe_description }}</strong>
-                <p><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
-                <p><strong>Directions:</strong> {{ recipe.preparation }}</p>
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header yellow-text blue-grey darken-2 text-shadow">
+                <i class="fas fa-list-ul"></i><strong>Ingredients:</strong>
+            </div>
+            <div class="collapsible-body">
+                {% for ingredient in recipe.ingredients %}
+                <p>- {{ingredient}}</p>
+                {% endfor %}
+            </div>
+        </li>
+        <li>
+            <div class="collapsible-header yellow-text blue-grey darken-2 text-shadow">
+                <i class="fas fa-mortar-pestle"></i><strong>Directions:</strong></div>
+            <div class="collapsible-body">
+                {% for step in recipe.preparation %}
+                <p>- {{step}}</p>
+                {% endfor %}
             </div>
         </li>
         {% endfor %}
