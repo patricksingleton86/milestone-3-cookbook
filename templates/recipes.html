@@ -7,21 +7,23 @@
         {{ recipe.recipe_description }}<br>
         {{ recipe.ingredients }}<br>
         {{ recipe.preparation }}<br>
+        {{ recipe.preparation_time }}<br>
     {% endfor %}
 
     <ul class="collapsible">
+        {% for recipe in recipes %}
         <li>
-            <div class="collapsible-header yellow-text blue-grey darken-2 text-shadow"><i class="fas fa-caret-down">filter_drama</i>First</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header yellow-text blue-grey darken-2 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                <strong>{{ recipe.recipe_name }}</strong> : {{ recipe.preparation_time }}
+            </div>
+            <div class="collapsible-body">
+                <strong>{{ recipe.recipe_description }}</strong>
+                <p><strong>Ingredients:</strong> {{ recipe.ingredients }}</p>
+                <p><strong>Directions:</strong> {{ recipe.preparation }}</p>
+            </div>
         </li>
-        <li>
-            <div class="collapsible-header yellow-text blue-grey darken-2 text-shadow"><i class="fas fa-caret-down">place</i>Second</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header yellow-text blue-grey darken-2 text-shadow"><i class="fas fa-caret-down">whatshot</i>Third</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% endfor %}
     </ul>
 
 {% endblock %}
