@@ -45,12 +45,11 @@
                     <label for="preparation_time">Preparation Time</label>
                 </div>
                 <div class="input-field col s6">
-                    <select id="categoty_name" name="categoty_name">
+                    <select id="categoty_name" name="categoty_name" class="validate" required>
                         <option value="" disabled selected>Meal Type</option>
-                        <option value="1">Breakfast</option>
-                        <option value="2">Lunch</option>
-                        <option value="3">Dinner</option>
-                        <option value="3">Snack</option>
+                        {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
                     </select>
                     <label for="categoty_name">Meal Type</label>
                 </div>
