@@ -1,15 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <ul class="collapsible">
+    <ul class="collapsible card-panel grey lighten-4">
         {% for recipe in recipes %}
-        <li class="active">
+        <li>
             <div class="collapsible-header yellow-text blue-grey darken-2 text-shadow">
                 <i class="fas fa-caret-down"></i>
                 <strong>{{ recipe.recipe_name }}</strong> : {{ recipe.preparation_time }}
             </div>
             <div class="collapsible-body">
                 <strong>{{ recipe.recipe_description }}</strong>
+                <p><em>By: {{ recipe.created_by }}</em></p>
             </div>
         </li>
         <li>
