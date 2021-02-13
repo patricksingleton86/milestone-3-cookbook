@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="blue-grey-text text-darken-2 center-align">Edit Recipe</h3>
+
+    <div class="row card-panel grey lighten-3">
+        <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+            <!-- recipe name -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-pencil-alt prefix blue-grey-text text-darken-2"></i>
+                    <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50"
+                        type="text" class="validate" required>
+                    <label for="recipe_name">Recipe Name</label>
+                </div>
+            </div>
+            <!-- description -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix blue-grey-text text-darken-2"></i>
+                    <textarea id="recipe_description" name="recipe_description" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="recipe_description">Description</label>
+                </div>
+            </div>
+            <!-- ingredients -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix blue-grey-text text-darken-2"></i>
+                    <textarea id="ingredients" name="ingredients" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="ingredients">Ingredients <em>(please add a comma after each ingredient)</em></label>
+                </div>
+            </div>
+            <!-- prep steps -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-align-left prefix blue-grey-text text-darken-2"></i>
+                    <textarea id="preparation" name="preparation" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="preparation">Preparation <em>(please add comma after each step</em>)</label>
+                </div>
+            </div>
+            <!-- prep time -->
+            <div class="row">
+                <div class="input-field col s6">
+                    <i class="fas fa-align-left prefix blue-grey-text text-darken-2"></i>
+                    <textarea id="preparation_time" name="preparation_time" minlength="5"
+                        maxlength="200" class="materialize-textarea validate" required></textarea>
+                    <label for="preparation_time">Preparation Time</label>
+                </div>
+                <!-- meal type select -->
+                <div class="input-field col s6">
+                    <select id="categoty_name" name="categoty_name" class="validate" required>
+                        <option value="" disabled selected>Meal Type</option>
+                        {% for category in categories %}
+                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="categoty_name">Meal Type</label>
+                </div>
+            </div>
+            <!-- submit button -->
+            <div class="row center-align">
+                <button type="submit" class="green grey-blue-text darken-4 text-shadow btn-large">
+                    Edit Recipe <i class="fas fa-edit right"></i>
+                </button>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}
