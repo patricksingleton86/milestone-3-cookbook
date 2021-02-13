@@ -31,7 +31,7 @@
                     <i class="fas fa-align-left prefix blue-grey-text text-darken-2"></i>
                     <textarea id="ingredients" name="ingredients" minlength="5"
                         maxlength="200" class="materialize-textarea validate" required>
-                        {{- recipe.ingredients -}}
+                        {{- ', '.join(recipe.ingredients) -}}
                     </textarea>
                     <label for="ingredients">Ingredients <em>(please add a comma after each ingredient)</em></label>
                 </div>
@@ -42,7 +42,7 @@
                     <i class="fas fa-align-left prefix blue-grey-text text-darken-2"></i>
                     <textarea id="preparation" name="preparation" minlength="5"
                         maxlength="200" class="materialize-textarea validate" required>
-                        {{- recipe.preparation -}}
+                        {{- ', '.join(recipe.preparation) -}}
                     </textarea>
                     <label for="preparation">Preparation <em>(please add comma after each step</em>)</label>
                 </div>

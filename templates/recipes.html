@@ -8,9 +8,11 @@
         <li>
             <div class="collapsible-header yellow-text blue-grey darken-2 text-shadow">
                 <div class="col s3">
-                    <i class="fas fa-caret-down"></i>
-                    <a class="btn-small green accent-4">Done</a>
-                    <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small blue accent-4">Edit</a>
+                    {% if session.user|lower == recipe.created_by|lower %}
+                        <i class="fas fa-caret-down"></i>
+                        <a class="btn-small green accent-4">Done</a>
+                        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small blue accent-4">Edit</a>
+                    {% endif %}
                 </div>
                 <div class="col s9">
                      <strong>{{ recipe.recipe_name }}</strong> : {{ recipe.preparation_time }}
