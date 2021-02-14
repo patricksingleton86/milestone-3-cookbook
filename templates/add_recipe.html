@@ -52,7 +52,7 @@
                 <!-- meal type select -->
                 <div class="input-field col s6">
                     <select id="categoty_name" name="categoty_name" class="validate" required>
-                        <option value="" disabled selected>Meal Type</option>
+                        <option value="" disabled>Meal Type</option>
                         {% for category in categories %}
                         <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                         {% endfor %}
