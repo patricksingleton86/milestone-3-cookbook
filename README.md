@@ -57,12 +57,13 @@ Site for finding new recipes and sharing your own recipes.
 
 ## Testing
 
-
-
-
-
-
-## Testing
+* all reciepes can be viewed but not edited when unregistered/ not logged in
+* Once logged in users can view all reciepes but only add, edit and delete their own uploads
+* search scans through recipe name, category, description and ingredients
+* Once successfully logged in/ registered users are welcomed to their profile page
+* Adding a new recipe requires all fields filled
+* Delete a recipe requires a confirmation
+* Editing a recipe has fields pre-filled for convienience  
 
 
 
