@@ -33,5 +33,38 @@ Site for finding new recipes and sharing your own recipes.
 * Navbar will prompt to register or if logged in will allow users to contribute their own recipes
 * Once registered/ logged in, users have the ability to add, edit and delete their own reciepe uploads 
 
+### Features left to implement
+
+* Images of uploaded meals
+* Comments & ratings of recipes by community members
+
+
+## Technologies used
+
+* HTML5
+* CSS3
+* Javascript
+* Flask
+* Jquery
+* MongoDB
+* Materialize
+* Github
+* Gitpod
+* Heroku
+* Fontawesome
+* Balsamiq
+
+
+## Testing
+
+
+
+
+
+
+## Testing
+
+
+
 
 
