@@ -59,7 +59,8 @@
                 </div>
                 <!-- meal type select -->
                 <div class="input-field col s6">
-                    <select id="categoty_name" name="categoty_name" class="validate" required>
+                    <i class="fas fa-align-left prefix blue-grey-text text-darken-2"></i>
+                    <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled>Meal Type</option>
                         {% for category in categories %}
                             {% if category.category_name == recipe.category_name %}
