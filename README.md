@@ -2,6 +2,9 @@
 
 Site for finding new recipes and sharing your own recipes.
 
+![Desktop](images/cookbook-desktop.png)
+![mobile](images/cookbook-mobile.png)
+
 
 ## UI/UX
 
@@ -15,6 +18,7 @@ Site for finding new recipes and sharing your own recipes.
 #### As the site owner I would like to:
 
 * Access, edit and delete all information on site
+
 
 ## Structure
 
@@ -64,8 +68,19 @@ Site for finding new recipes and sharing your own recipes.
 * Adding a new recipe requires all fields filled
 * Delete a recipe requires a confirmation
 * Editing a recipe has fields pre-filled for convienience  
+* Cannot register an existing username
+* Would like to implement more back end security features down the line 
+
+* ran code through W3C, Jigsaw, JS Hint and PEP8 validators
+
+
+## Deployment
+
+* Initial push to Github which was set to automatically deploy to Heroku
+* Pushed no sensitive keys or code through git, set config vars on heroku to interperet files
 
 
 
+## Credits
 
-
+* code for the validate input line under meal type in tha add recipe form was used from jquery from the Materialize Form Validation video from the mini project (https://courses.codeinstitute.net/courses/course-v1:CodeInstitute+DCP101+2017_T3/courseware/196c000dd670458cafc7b2dc9d4a8245/f2ad3c6775ce4890a53e62de35245c0a/?activate_block_id=block-v1%3ACodeInstitute%2BDCP101%2B2017_T3%2Btype%40sequential%2Bblock%40f2ad3c6775ce4890a53e62de35245c0a)
