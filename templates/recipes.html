@@ -22,8 +22,8 @@
     <h3 class="yellow-text accent-4 center-align text-shadow">Recipes</h3>
 
     {% if recipes|length > 0 %}
-        <ul class="collapsible">
-            {% for recipe in recipes %}
+        {% for recipe in recipes %}
+            <ul class="collapsible">
                 <li>
                     <div class="collapsible-header yellow-text blue-grey darken-2 text-shadow">
                         <div class="col s3">
@@ -62,8 +62,8 @@
                         {% endfor %}
                     </div>
                 </li>
-            {% endfor %}
-        </ul>
+            </ul>
+        {% endfor %}
     {% else %}
         <h3 class="red-text text-darken-2 center-align">No Results Found</h3>
     {% endif %}
