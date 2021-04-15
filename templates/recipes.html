@@ -35,54 +35,56 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container recipe-container">
     <div class="section">
         <div class="row">
-            <h3 class="yellow-text accent-4 center-align">Recipes</h3>
+            <h3 class="teal-text accent-4 center">Recipes</h3>
         </div>
         {% if recipes|length > 0 %}
         <div class="row">
             {% for recipe in recipes %}
             <div class="col s12 m6">
-                <ul class="collapsible">
-                    <li>
-                        <div class="collapsible-header yellow-text blue-grey darken-2 text-shadow">
-                            {% if session.user|lower == recipe.created_by|lower %}
-                            <i class="fas fa-caret-down"></i>
-                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-                                class="btn-small blue accent-4 right">Edit</a>
-                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                                onclick="return confirm('Are you sure you want to delete?');"
-                                class="btn-small green accent-4 right">Delete</a>
-                            {% endif %}
-                            <strong>{{ recipe.recipe_name }}</strong> : {{ recipe.category_name }} :
-                            {{ recipe.preparation_time }}
-                        </div>
-                        <div class="collapsible-body">
-                            <strong>{{ recipe.recipe_description }}</strong>
-                            <p><em>By: {{ recipe.created_by }}</em></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header yellow-text blue-grey darken-2 text-shadow">
-                            <i class="fas fa-list-ul"></i><strong>Ingredients:</strong>
-                        </div>
-                        <div class="collapsible-body">
-                            {% for ingredient in recipe.ingredients %}
-                            <p>- {{ingredient}}</p>
-                            {% endfor %}
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header yellow-text blue-grey darken-2 text-shadow">
-                            <i class="fas fa-mortar-pestle"></i><strong>Preparation:</strong></div>
-                        <div class="collapsible-body">
-                            {% for step in recipe.preparation %}
-                            <p>- {{step}}</p>
-                            {% endfor %}
-                        </div>
-                    </li>
-                </ul>
+                <div class="recipe-block">
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header teal-text darken-2">
+                                <strong>{{ recipe.recipe_name }}</strong> : {{ recipe.category_name }} :
+                                {{ recipe.preparation_time }}
+                                {% if session.user|lower == recipe.created_by|lower %}
+                                <i class="fas fa-caret-down"></i>
+                                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                                    class="btn-small blue-text white accent-4 align-right">Edit</a>
+                                <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                                    onclick="return confirm('Are you sure you want to delete?');"
+                                    class="btn-small green-text white accent-4 align-right">Delete</a>
+                                {% endif %}
+                            </div>
+                            <div class="collapsible-body">
+                                <strong>{{ recipe.recipe_description }}</strong>
+                                <p><em>By: {{ recipe.created_by }}</em></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header teal-text darken-2">
+                                <i class="fas fa-list-ul"></i><strong>Ingredients:</strong>
+                            </div>
+                            <div class="collapsible-body">
+                                {% for ingredient in recipe.ingredients %}
+                                <p>- {{ingredient}}</p>
+                                {% endfor %}
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header teal-text darken-2">
+                                <i class="fas fa-mortar-pestle"></i><strong>Preparation:</strong></div>
+                            <div class="collapsible-body">
+                                {% for step in recipe.preparation %}
+                                <p>- {{step}}</p>
+                                {% endfor %}
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
             {% endfor %}
         </div>

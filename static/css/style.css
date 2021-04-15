@@ -1,21 +1,21 @@
 nav ul a,
 nav .brand-logo {
-  color: #444;
+    color: #444;
 }
 
 p {
-  line-height: 2rem;
+    line-height: 2rem;
 }
 
 .sidenav-trigger {
-  color: #26a69a;
+    color: #26a69a;
 }
 
 .background-image-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
+    min-height: 380px;
+    line-height: 0;
+    height: auto;
+    color: rgba(255,255,255,.9);
 }
 
 .background-image .section {
@@ -24,12 +24,18 @@ p {
 
 @media only screen and (max-width : 992px) {
   .background-image-container .section {
-    position: absolute;
     top: 40%;
   }
+
   #recipe-banner .section {
     top: 10%;
   }
+}
+
+@media only screen and (max-width : 720px) {
+    .brand-logo {
+        display: none !important;
+    }
 }
 
 @media only screen and (max-width : 600px) {
@@ -38,11 +44,15 @@ p {
   }
 }
 
+.recipe-container {
+    width: 100%;
+}
+
 .recipe-block {
-  padding: 0 15px;
-  font-size: inherit;
+    padding: 0 15px;
+    font-size: inherit;
 }
 
 footer.page-footer {
-  margin: 0;
+    margin: 0;
 }
