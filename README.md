@@ -85,3 +85,7 @@ Site for finding new recipes and sharing your own recipes.
 ## Credits
 
 * code for the validate input line under meal type in tha add recipe form was used from jquery from the Materialize Form Validation video from the mini project (https://courses.codeinstitute.net/courses/course-v1:CodeInstitute+DCP101+2017_T3/courseware/196c000dd670458cafc7b2dc9d4a8245/f2ad3c6775ce4890a53e62de35245c0a/?activate_block_id=block-v1%3ACodeInstitute%2BDCP101%2B2017_T3%2Btype%40sequential%2Bblock%40f2ad3c6775ce4890a53e62de35245c0a)
+
+### Images
+
+* Photo by fauxels from Pexels - https://www.pexels.com/photo/woman-pouring-juice-on-glass-3184192/

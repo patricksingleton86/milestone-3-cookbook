@@ -1,27 +1,48 @@
-.text-shadow {
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+nav ul a,
+nav .brand-logo {
+  color: #444;
 }
 
-.h3 {
-    color: #ffeb3b !important;
-}
-.flashes h4 {
-    line-height: 2;
+p {
+  line-height: 2rem;
 }
 
-.btn-small {
-    margin: 5px;
+.sidenav-trigger {
+  color: #26a69a;
 }
 
-.collapsible-header .col strong {
-    margin: 5px;
-    line-height: 42px;
+.background-image-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
 }
 
-ul {
-    margin: 5em;
+.background-image .section {
+    width: 100%;
 }
 
-body {
-    background-color: #f3e5f5;
+@media only screen and (max-width : 992px) {
+  .background-image-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #recipe-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #recipe-banner .section {
+    top: 0;
+  }
+}
+
+.recipe-block {
+  padding: 0 15px;
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
 }
