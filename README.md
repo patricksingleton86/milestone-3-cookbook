@@ -36,15 +36,15 @@ Site for finding new recipes and sharing your own recipes. The main goal of the 
 
 ## Features
 
-* Instantantly search for whatever food you crave
-* Simple accordion drop downs to any meal that looks interesting
+* Instantly search for whatever food you crave
+* Simple accordion drop downs for any meal that looks interesting
 * No life stories or longwinded tales, just ingredients required and the steps to prepare
 * Simply register/log in to share recipes of your own
 * Navbar will prompt to register or if logged in will allow users to contribute their own recipes
 * Once registered/logged in, users have the ability to add, edit and delete their own reciepe uploads 
-* all recipes can be viewed but not edited when unregistered/not logged in
+* All recipes can be viewed but not edited when unregistered/not logged in
 * Once logged in, users can view all reciepes but only add, edit and delete their own uploads
-* search scans through recipe name, category, description and ingredients
+* Search scans through recipe name, category, description and ingredients
 * Once successfully logged in/ registered users are welcomed to their profile page
 * Adding a new recipe requires all fields filled
 * Delete a recipe requires a confirmation
@@ -74,7 +74,7 @@ Site for finding new recipes and sharing your own recipes. The main goal of the 
 
 ## Testing
 #### Automated
-* Jigsaw only shows 1 error in materialize file
+* Jigsaw shows 1 error but attributed to Materialize
 * No errors in w3 html validator
 * No error in JSHint
 * PEP8 threw 2 indentation errors, now fixed
