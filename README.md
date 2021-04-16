@@ -66,8 +66,9 @@ Site for finding new recipes and sharing your own recipes. The main goal of the 
 
 ## Testing
 #### Bugs
-* The parallax image(background image on recipes page) 
-* all reciepes can be viewed but not edited when unregistered/ not logged in
+* I strugled with the parallax image(background image on recipes page) for more time than I'd like to admit, the error turned out to be a Jinja v Materialize conflict, lack of {{ url_for }} syntax 
+* Had contrast issues cause by materialize so had to override with code from https://stackoverflow.com/questions/38996019/how-to-change-the-text-color-in-a-materializecss-select-dropdown
+* all recipes can be viewed but not edited when unregistered/ not logged in
 * Once logged in users can view all reciepes but only add, edit and delete their own uploads
 * search scans through recipe name, category, description and ingredients
 * Once successfully logged in/ registered users are welcomed to their profile page
