@@ -46,6 +46,16 @@ p {
     font-size: 3em !important;
 }
 
+/* Overide materialize dropdown color for better contrast */
+/* Code found here: https://stackoverflow.com/questions/38996019/how-to-change-the-text-color-in-a-materializecss-select-dropdown */
+ul.dropdown-content.select-dropdown li span {
+    color: #00796b;
+}
+
+input.select-dropdown.dropdown-trigger {
+    color: #00796b;
+}
+
 @media only screen and (max-width : 720px) {
     .brand-logo {
         display: none !important;
