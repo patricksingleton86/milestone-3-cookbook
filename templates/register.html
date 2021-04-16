@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="center-align">Register</h3>
+    <h3 class="center-align teal-text text-darken-2">Register</h3>
 
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
@@ -9,24 +9,24 @@
                 <!-- username -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-user-plus prefix blue-grey-text text-darken-2"></i>
+                        <i class="fas fa-user-plus prefix teal-text text-darken-2"></i>
                         <input id="username" name="username" type="text" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                        <label for="username">Username</label>
+                        <label for="username" class="teal-text text-darken-2">Username</label>
                     </div>
                 </div>
                 <!-- password -->
                 <div class="row">
                     <div class="input-field col s12">
-                        <i class="fas fa-user-lock prefix blue-grey-text text-darken-2"></i>
+                        <i class="fas fa-user-lock prefix teal-text text-darken-2"></i>
                         <input id="password" name="password" type="password" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                        <label for="password">Password</label>
+                        <label for="password" class="teal-text text-darken-2">Password</label>
                     </div>
                 </div>
                 <!-- register button -->
                 <div class="row">
-                    <button type="submit" class="col s12 btn-large blue-grey darken-2 text-shadow">
+                    <button type="submit" class="col s12 btn-large black-text">
                         Register <i class="fas fa-sign-in-alt"></i>
                     </button>
                 </div>
@@ -38,7 +38,7 @@
         <div class="col s12">
             <p class="center-align">
                 Already Registered?
-                <a href="{{ url_for('login') }}" class="blue-grey-text text-darken-2">Log In</a>
+                <a href="{{ url_for('login') }}" class="teal-text text-darken-2">Log In</a>
             </p>
         </div>
     </div>

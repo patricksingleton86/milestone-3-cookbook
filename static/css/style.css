@@ -1,5 +1,6 @@
 nav ul a,
-nav .brand-logo {
+nav .brand-logo,
+hr {
     color: #444;
 }
 
@@ -8,28 +9,41 @@ p {
 }
 
 .sidenav-trigger {
-    color: #26a69a;
+    color: #444;
 }
 
 .parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
+    position: relative;
+    line-height: 0;
+    height: 100vh;
+    color: rgba(255,255,255,.9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
 
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
+.parallax-container .section {
+    width: 100%;
     position: absolute;
     top: 40%;
-  }
+}
 
-  #recipe-banner .section {
+#recipe-banner .section {
     top: 10%;
-  }
+}
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sidenav a {
+    font-size: large !important;
+}
+
+.page-footer a {
+    font-size: 3em !important;
 }
 
 @media only screen and (max-width : 720px) {
