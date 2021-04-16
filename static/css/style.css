@@ -56,6 +56,14 @@ input.select-dropdown.dropdown-trigger {
     color: #00796b;
 }
 
+input#recipe_name,
+textarea#recipe_description,
+textarea#ingredients,
+textarea#preparation,
+textarea#preparation_time {
+    color: #00796b;
+}
+
 @media only screen and (max-width : 720px) {
     .brand-logo {
         display: none !important;
