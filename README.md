@@ -75,14 +75,25 @@ Site for finding new recipes and sharing your own recipes. The main goal of the 
 ## Testing
 #### Automated
 * Jigsaw only shows 1 error in materialize file
+* No errors in w3 html validator
+* No error in JSHint
+* PEP8 threw 2 indentation errors, now fixed
+
+#### User Story Testing
+##### Search for new recipes:
+* Search function works great, returns a match if keyword is found in any part of recipe, no results found if not
+##### Share my Own recipes:
+* Add recipe form sends to MongoDB as desired, data all showing up in database and retrievable
+##### Edit/delete my uploaded recipes:
+* Buttons work as desired, edit page successfully retrieves information and saves or deletes changes
+##### Be able to register/log in:
+* All login passwords stored in encrypted keys, pages show errors when input criteria not met
+##### Access, edit and delete all information on site:
+* Administrative functions in place have power to edit/remove desired recipe
 
 #### Bugs
 * I strugled with the parallax image(background image on recipes page) for more time than I'd like to admit, the error turned out to be a Jinja v Materialize conflict, lack of {{ url_for }} syntax 
 * Had contrast issues caused by materialize so had to override, found solution to similar problem at https://stackoverflow.com/questions/38996019/how-to-change-the-text-color-in-a-materializecss-select-dropdown
-
-
-* ran code through W3C, Jigsaw, JS Hint and PEP8 validators
-
 
 ## Deployment
 * This project was made using Gitpod
