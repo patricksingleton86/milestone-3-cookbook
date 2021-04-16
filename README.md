@@ -42,11 +42,19 @@ Site for finding new recipes and sharing your own recipes. The main goal of the 
 * Simply register/log in to share recipes of your own
 * Navbar will prompt to register or if logged in will allow users to contribute their own recipes
 * Once registered/logged in, users have the ability to add, edit and delete their own reciepe uploads 
+* all recipes can be viewed but not edited when unregistered/not logged in
+* Once logged in, users can view all reciepes but only add, edit and delete their own uploads
+* search scans through recipe name, category, description and ingredients
+* Once successfully logged in/ registered users are welcomed to their profile page
+* Adding a new recipe requires all fields filled
+* Delete a recipe requires a confirmation
+* Editing a recipe has fields pre-filled for convienience  
+* Cannot register an existing username
 
 ### Features left to implement
 
 * Images of uploaded meals
-* Comments & ratings of recipes by community members
+* Comments & possibly ratings of recipes by community members
 
 ## Technologies used
 
@@ -65,28 +73,37 @@ Site for finding new recipes and sharing your own recipes. The main goal of the 
 
 
 ## Testing
+#### Automated
+* Jigsaw only shows 1 error in materialize file
+
 #### Bugs
 * I strugled with the parallax image(background image on recipes page) for more time than I'd like to admit, the error turned out to be a Jinja v Materialize conflict, lack of {{ url_for }} syntax 
-* Had contrast issues cause by materialize so had to override with code from https://stackoverflow.com/questions/38996019/how-to-change-the-text-color-in-a-materializecss-select-dropdown
-* all recipes can be viewed but not edited when unregistered/ not logged in
-* Once logged in users can view all reciepes but only add, edit and delete their own uploads
-* search scans through recipe name, category, description and ingredients
-* Once successfully logged in/ registered users are welcomed to their profile page
-* Adding a new recipe requires all fields filled
-* Delete a recipe requires a confirmation
-* Editing a recipe has fields pre-filled for convienience  
-* Cannot register an existing username
-* Would like to implement more back end security features down the line 
+* Had contrast issues caused by materialize so had to override, found solution to similar problem at https://stackoverflow.com/questions/38996019/how-to-change-the-text-color-in-a-materializecss-select-dropdown
+
 
 * ran code through W3C, Jigsaw, JS Hint and PEP8 validators
 
 
 ## Deployment
+* This project was made using Gitpod
 
-* Initial push to Github which was set to automatically deploy to Heroku
-* Pushed no sensitive keys or code through git, set config vars on heroku to interperet files
+#### MongoDB
 
+* Log in to Mongo MongoDB
+* Click on the Cluster's link under "Data Storage"
+* Select "connect your application"
+* Select the version of python you are using and copy link provided
+* In cluster overview, click connect
+* Install PyMongo with "pip3 install pymongo"
 
+#### Heroku
+
+* In Gitpod, create requirements.txt using "pip3 freeze --local > requirements.txt"
+* Create Procfile using "echo web: python app.py > Procfile"
+* Log into Heroku, click new app
+* Navigate to deployment page, click the Github logo and connect desired repository
+* Navigate to settings, select reveal config vars and set variables
+* Return to deploy page and enable automatic deploys
 
 ## Credits
 
