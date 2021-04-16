@@ -1,9 +1,8 @@
-# Online Cookbook
+# Community Cookbook
 
-Site for finding new recipes and sharing your own recipes.
+Site for finding new recipes and sharing your own recipes. The main goal of the site is for a cookware company, "Pots n Pans", to aquire customers by getting the brand name out to food lovers and potential costumers, and directing them to social media to purchase the best cookware the world has ever known.
 
-![Desktop](images/cookbook-desktop.png)
-![mobile](images/cookbook-mobile.png)
+![Site](images/site_screens.png)
 
 [Live site through Heroku](https://milestone-cookbook.herokuapp.com/)
 
@@ -26,7 +25,15 @@ Site for finding new recipes and sharing your own recipes.
 * Instant access community uploaded meals
 * Easily search for meals by ingredients or meal type
 
-[wireframes](/workspace/milestone-3-cookbook/images/milestone-3-cookbook.pdf)
+[Recipes](images/home.png)
+
+[Add Recipe](images/add_recipe.png)
+
+[Log In](images/log_in.png)
+
+[Profile](images/profile.png)
+
+[Register](images/register.png)
 
 
 ## Features
